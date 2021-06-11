@@ -39,7 +39,7 @@ Error/Exception messages can be displayed in the custom related list by using th
 </error>
 ```
 
-If you don't really understand, paste the script below into your function, and see what it does to your related list on your CRM record.
+If you don't really understand, paste the Deluge script below into your function, and see what it does to your related list on your CRM record.
 ```javascript
 resp = '<record><row no="0"><FL val="Name1">value1</FL><FL val="Name2">value2</FL></row><row no="1"><FL val="Name1">value1</FL><FL val="Name2">value2</FL></row></record>';
 return resp;
