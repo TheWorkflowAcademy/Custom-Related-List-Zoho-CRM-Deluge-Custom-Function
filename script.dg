@@ -16,7 +16,7 @@ if(relatedContacts.size() > 1)
 			contactRecord = zoho.crm.getRecordById("Contacts",c.get("id"));
 			contactName = contactRecord.get("Full_Name");
 			contactPhone = contactRecord.get("Phone");
-			responseXML = responseXML + "<row no='" + n + "'><FL val='Customer Name'>" + contactName + "</FL><FL val='Customer Phone'>" + contactPhone + "</FL></row>";
+			responseXML = responseXML + "<row no='" + n + "'><FL val='Customer Name'>" + contactName + "</FL><FL val='Phone'>" + contactPhone + "</FL></row>";
 			n = n + 1;
 		}
 	}
