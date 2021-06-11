@@ -2,7 +2,7 @@
 Guide for creating custom Related Lists in Zoho CRM via Deluge custom function.
 
 ## Core Idea
-With Related Lists, users are able to view associated records in Zoho CRM. Right off the bat, Related Lists are provided by default. For example a Contact has associated Deals, Notes, Activites, Attachments. The cool thing is, you have the ability to add your own custom Related List. Zoho has made this programmable via Deluge, and that opens up a world of possibilities. Think about all the information you can have displayed as a Related List in CRM - and that is not limited to Zoho CRM (you can even pull information from other Zoho or third-party apps).
+With Related Lists, users are able to view associated records in Zoho CRM. Right out of the box, Zoho CRM provides users Related Lists by default. For example a Contact has associated Deals, Notes, Activites, Attachments. The cool thing is, you have the ability to add your own custom Related List. Zoho has made this programmable via Deluge, and that opens up a world of possibilities. Think about all the information you can have displayed as a Related List in CRM - and that is not limited to Zoho CRM (you can even pull information from other Zoho or third-party apps).
 
 ## Tutorial
 To assist this tutorial, I'm going to provide an example - I want to create a Related List that shows me other Contacts that are from the same event (I have a custom field called "Event Type" that I'll use to identify these Contacts).
