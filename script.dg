@@ -1,0 +1,31 @@
+// Get Event Type
+contact = zoho.crm.getRecordById("Contacts",contactid);
+type = contact.get("Event_Type");
+
+// Search for other Contacts with the same Event Type
+relatedContacts = zoho.crm.searchRecords("Contacts","(Event_Type:equals:" + type + ")",1,10); // You can limit the number of records here
+if(relatedContacts.size() > 1)
+{
+	// Counter
+	n = 0;
+	responseXML = "<record>";
+	for each  c in relatedContacts
+	{
+		if(c.get("id") != contactid)
+		{
+			contactRecord = zoho.crm.getRecordById("Contacts",c.get("id"));
+			contactName = contactRecord.get("Full_Name");
+			contactPhone = contactRecord.get("Phone");
+			responseXML = responseXML + "<row no='" + n + "'><FL val='Customer Name'>" + contactName + "</FL><FL val='Customer Phone'>" + contactPhone + "</FL></row>";
+			n = n + 1;
+		}
+	}
+	responseXML = responseXML + "</record>";
+}
+else
+{
+	// Return error message if no Contact is found
+	responseXML = "<error>=><message>No other contact has this event type.</message></error>";
+}
+
+return responseXML;
